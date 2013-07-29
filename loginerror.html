@@ -18,11 +18,11 @@
 	<div id="demoMenu">
 		<ul>
 			<li><a href="login.html">Login</a></li>
-			<li><a href="loginwarning.html">Login Warning</a></li>
+			<li><a href="usernamewarning.html">Username Warning</a></li>
+			<li><a href="passwordwarning.html">Password Warning</a></li>
 			<li><a href="loginerror.html">Login Error</a></li>
 			<li><a href="expired.html">Password Expired</a></li>
-			<li><a href="forgotlogin.html">Forgot Login</a></li>
-			<li><a href="forgotpassword.html">Forgot Password</a></li>	
+			<li><a href="loginhelp.html">Login Help</a></li>
 			<li><a href="reset.html">Reset Password</a></li>
 			<li><a href="resetsuccess.html">Reset Success</a></li>
 		</ul>
@@ -33,23 +33,17 @@
 		</header>
 		<div class="alert error">
 			<a href="#" class="icon close">Close</a>
-			<p>Yo, dawg! Now you really did it. You locked yourself out.</p> 
-		</div> <!-- alert error --><form action="" id="login" name="login">
+			<p>Sorry, you have exceeded the number of login attempts and your account is now locked out. An email has been sent to your account with instructions on unlocking your account.</p> 
+		</div> <!-- alert error -->
+		<form action="" id="login" name="login">
+			<label for"username">Username</label>
 			<input type="text" placeholder="Username" id="username" autofocus tabindex=1 required />
-			<label for"username">
-				Username
-				<span>
-					<a href="#">Forgot username?</a>
-				</span>
-			</label>
+			<label for"password">Password</label>
 			<input type="password" placeholder="Password" id="password" tabindex=2 required />
-			<label for"password">
-				Password
-				<span>
-					<a href="#">Forgot password?</a>
-				</span>
-			</label>
 			<input type="submit" value="Log In" tabindex=3 />
+			<span>
+				<a href="loginhelp.html">I need help logging in</a>
+			</span>
 		</form>
 		<footer>
 			<p>© 1991-2013 Chatham Financial</p>

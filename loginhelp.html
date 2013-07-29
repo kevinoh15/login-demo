@@ -31,14 +31,14 @@
 		<header>
 			<h1>Chatham Direct Login</h1>
 		</header>
-		<form action="" id="remind" name="reset">
-			<p>To reset your account, enter a new password and then verify it to continue. </p> 
-			<label for"newpassword">New Password</label>
-			<input type="password" placeholder="New password" id="newpassword" tabindex=4 required />
-			<label for"confirmpasswordpassword">Confirm Password</label>
-			<input type="password" placeholder="Re-enter New Password" id="confirmpassword" tabindex=5 required />
-			<input type="submit" value="Reset Password" class="reset" tabindex=6 />
-		</form>	
+		<form action="" id="remind" name="remind">
+			<p>Please enter the email address associated with this account and we'll send some help your way.</p> 
+			<label for"email">Email Address</label><input type="email" placeholder="Email address" id="email" tabindex=1 required />
+			<input type="submit" value="Send Help" class="reset" tabindex=2 />
+			<span>
+				<a href="login.html">Return to log in</a>
+			</span>
+		</form>
 		<footer>
 			<p>© 1991-2013 Chatham Financial</p>
 		</footer>
