@@ -1,0 +1,282 @@
+/* styles */
+
+/* ----------- COLORS ----------- */
+
+@black:			rgb(65, 65, 65); 	/* fonts. nav. */
+@darkgray:		rgb(169, 170, 174);	/* borders. icons. */
+@mediumgray:	rgb(210, 210, 210);	/* primarily for hovers on certain buttons. */
+@gray:			rgb(222, 223, 227);	/* sidebar tabs. certain button bg. */
+@lightgray:		rgb(238, 239, 242);	/* drop downs. alternating rows. */
+@blue:			rgb(171, 200, 230);	/* selection colors. */
+@green:			rgb(115, 173, 85);	/* positive colors. submissions/saves. */
+@green2:		rgb(100, 153, 73);	/* hover and border for green button */
+@green3:		rgb(89, 139, 64);	/* active for green button */
+@yellow:		rgb(235, 172, 85);	/* non-critical alerts. */
+@red:			rgb(156, 33, 64);	/* negative actions and critical alerts */
+@white:			rgb(255, 255, 255);	/* white, duh. */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html { 
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	color: @black;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	background: @lightgray;
+}
+
+body {
+	margin: 0;
+}
+
+main {
+	display: block;
+	margin: 120px auto 0; /*top padding change to 80px after demo site removed */
+	max-width: 1280px;
+	text-align: center;
+}
+
+header h1 {
+	width: 371px;
+	height: 106px;
+	margin: 0 auto 40px;
+	display: block;
+	background: transparent url(../images/chatham-direct-logo-login.png) top left no-repeat;
+	text-indent: -9999px;
+}
+
+/* ----------- STYLES FOR DEMO SITE ONLY ----------- */
+
+#demoMenu {
+	background: @black;
+	width: 100%;
+	margin: 0;
+	padding: 10px;
+	position: fixed;
+	display: inline;
+	top: 0;
+	z-index: 9999;
+	border-bottom: 1px solid @white;
+
+		ul {
+			margin: 0;
+			padding: 0;
+
+			li {
+				margin: 0;
+				padding: 10px 20px;
+				float: left;
+				list-style: none;
+				font-size: 75%;
+				font-weight: bold;
+			
+				a {
+					color: @gray;
+					text-decoration: none;
+
+					&:hover {
+						color: @white;
+						
+					}
+				}
+			}
+
+		}
+}
+
+/* ----------- LOGIN FORM ----------- */
+
+form {
+	background: lighten(@darkgray, 30);
+	-webkit-box-shadow: 0 1px 0 @white inset;
+	-moz-box-shadow: 0 1px 0 @white inset;
+	-ms-box-shadow: 0 1px 0 @white inset;
+	-o-box-shadow: 0 1px 0 @white inset;
+	box-shadow: 0 1px 0 @white inset;
+	border: 1px solid @mediumgray;
+	margin: 0 auto 40px;
+	padding: 30px 40px;
+	text-align: left;
+	text-shadow: 0 1px 0 @white;
+	max-width: 498px; 
+	overflow: auto;
+
+		input {
+			width: 100%;
+			margin: 5px 0;
+			padding: 10px;
+			font-size: .9em;
+			border: 1px solid @mediumgray;
+			color: @black;
+			float: left;
+			clear: both;
+		
+
+			&[type="submit"] {
+				width: 50%;
+				border-color: transparent;
+				font-weight: bold;
+				color: @white;
+				background: lighten(@black, 20);
+				
+				&:hover {
+					background: lighten(@black, 10);
+				}
+
+				&:focus {
+					background: lighten(@black, 10);
+				}
+			}
+		}
+	
+		label {
+			visibility: hidden;
+
+			span a {
+				visibility: visible;
+				float: right;
+				font-size: 80%;
+				color: lighten(@black, 10);
+				text-decoration: none;
+				margin-bottom: 20px;
+			}
+
+			span a:hover {
+				color: @black;
+				text-decoration: underline;
+			}
+
+		}
+
+		p {
+			margin-top: 0;
+		}
+
+		input[type="submit"].reset {
+			margin-top: 20px;
+		}
+
+		::-webkit-input-placeholder {
+			font-style: italic;
+			color: @darkgray;
+		}
+
+		:-moz-placeholder { /* Firefox 18- */
+			font-style: italic; 
+			color: @darkgray;
+		}
+
+		::-moz-placeholder {  /* Firefox 19+ */
+			font-style: italic;  
+			color: @darkgray;
+		}
+
+		:-ms-input-placeholder {  
+			font-style: italic;
+			color: @darkgray;
+		}
+
+}
+
+/* ----------- FOOTER ----------- */
+
+footer {
+	font-size: 80%;
+}
+
+/* ----------- ALERTS ----------- */
+
+.alert {
+	border: 1px solid;
+	margin: 0 auto 40px;
+	padding: 30px 40px 20px;
+	position: relative;
+	text-align: left;
+	text-shadow: 0 1px 0 @white;
+	max-width: 498px; 
+	overflow: auto;
+
+	&.warning {
+		background: lighten(@yellow, 30);
+		border-color: @yellow;
+	}
+
+	&.error {
+		background: lighten(@red, 50);
+		border-color: lighten(@red, 25); 
+	}
+
+	&.success {
+		background: lighten(@green, 30);
+		border-color: @green; 
+	}
+
+	.icon {
+		width: 30px;
+		height: 30px;
+		display: block;
+		text-indent: -9999px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: url(../images/chathamdirect-sprite-2.png) no-repeat;
+	
+		&.close {
+			background-position: -240px -30px;
+		}
+
+	}
+
+	p {
+		line-height: 1.65em;
+	}
+
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+
+@media only screen and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 540px)  {
+
+	main {
+		margin: 180px 20px; /* change top margin to 40px after demo site removed */
+	}
+
+	header h1 {
+		width: 244px;
+		height: 70px;
+		margin: 0 auto 20px;
+		background: transparent url(../images/chatham-direct-logo-login-small.png) top left no-repeat;
+	}
+
+	form{
+		margin: 0 auto 20px;
+		padding: 20px;
+	
+			input[type="submit"] {
+				width: 100%;
+			}
+
+	}
+
+	.alert {
+		padding: 20px 20px 10px 20px;
+	}
+
+	footer {
+		text-align: center;
+	}
+
+}
