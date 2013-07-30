@@ -1,3 +1,3 @@
-login-demo
+Kenny Loggins
 ==========
-<h1>Kenny Loggins</h1> 
+<p>Login demo for various alerts, errors and help messages.</p>

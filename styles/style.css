@@ -1,1 +1,252 @@
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box}html{font-family:Helvetica,Arial,sans-serif;font-weight:400;color:#414141;font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;-o-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;background:#eeeff2}body{margin:0}main{display:block;margin:120px auto 0;max-width:1280px;text-align:center}header h1{width:371px;height:106px;margin:0 auto 40px;display:block;background:transparent url(../images/chatham-direct-logo-login.png) top left no-repeat;text-indent:-9999px}#demoMenu{background:#414141;width:100%;margin:0;padding:10px;position:fixed;display:inline;top:0;z-index:9999;border-bottom:1px solid #fff}#demoMenu ul{margin:0;padding:0}#demoMenu ul li{margin:0;padding:10px 20px;float:left;list-style:none;font-size:75%;font-weight:bold}#demoMenu ul li a{color:#dedfe3;text-decoration:none}#demoMenu ul li a:hover{color:#fff}form{background:#f8f8f8;-webkit-box-shadow:0 1px 0 #fff inset;-moz-box-shadow:0 1px 0 #fff inset;-ms-box-shadow:0 1px 0 #fff inset;-o-box-shadow:0 1px 0 #fff inset;box-shadow:0 1px 0 #fff inset;border:1px solid #d2d2d2;margin:0 auto 40px;padding:40px 40px 0 40px;text-align:left;text-shadow:0 1px 0 #fff;max-width:498px;overflow:auto}form input{width:100%;margin:0 0 40px 0;padding:10px;font-size:.9em;border:1px solid #d2d2d2;color:#414141}form input[type="submit"]{width:50%;border-color:transparent;font-weight:bold;color:#fff;background:#747474;float:left}form input[type="submit"]:hover{background:#5a5a5a}form input[type="submit"]:focus{background:#5a5a5a}form label{display:none}form span{float:right;width:50%;text-align:center;padding:10px}form span a{color:#747474;text-decoration:none}form span a:hover{text-decoration:underline;color:#414141}form p{margin:0 0 30px 0}form ::-webkit-input-placeholder{font-style:italic;color:#a9aaae}form :-moz-placeholder{font-style:italic;color:#a9aaae}form ::-moz-placeholder{font-style:italic;color:#a9aaae}form :-ms-input-placeholder{font-style:italic;color:#a9aaae}footer{font-size:80%}.alert{border:1px solid;margin:0 auto 40px;padding:30px 40px 20px;position:relative;text-align:left;text-shadow:0 1px 0 #fff;max-width:498px;overflow:auto}.alert a{text-decoration:none}.alert a:hover{text-decoration:underline}.alert.warning{background:#fbefde;border-color:#ebac55}.alert.warning a{color:#c37b17}.alert.error{background:#f3c9d3;border-color:#dd5f7f}.alert.error a{color:#9c2140}.alert.success{background:#c8dfbc;border-color:#73ad55}.alert.success a{color:#73ad55}.alert .icon{width:30px;height:30px;display:block;text-indent:-9999px;position:absolute;top:0;right:0;background:url(../images/chathamdirect-sprite-2.png) no-repeat}.alert .icon.close{background-position:-240px -30px}.alert p{line-height:1.65em}@media only screen and (max-width:480px),screen and (max-device-width:480px),screen and (max-width:540px){main{margin:180px 20px}header h1{width:244px;height:70px;margin:0 auto 20px;background:transparent url(../images/chatham-direct-logo-login-small.png) top left no-repeat}form{margin:0 auto 20px;padding:20px}form input[type="submit"]{width:100%}.alert{padding:20px 20px 10px 20px}footer{text-align:center}}
+/* styles */
+/* ----------- COLORS ----------- */
+/* fonts. nav. */
+/* borders. icons. */
+/* primarily for hovers on certain buttons. */
+/* sidebar tabs. certain button bg. */
+/* drop downs. alternating rows. */
+/* selection colors. */
+/* positive colors. submissions/saves. */
+/* hover and border for green button */
+/* active for green button */
+/* non-critical alerts. */
+/* negative actions and critical alerts */
+/* white, duh. */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #414141;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background: #eeeff2;
+}
+body {
+  margin: 0;
+}
+main {
+  display: block;
+  margin: 120px auto 0;
+  /*top padding change to 80px after demo site removed */
+
+  max-width: 1280px;
+  text-align: center;
+}
+header h1 {
+  width: 371px;
+  height: 106px;
+  margin: 0 auto 40px;
+  display: block;
+  background: transparent url(../images/chatham-direct-logo-login.png) top left no-repeat;
+  text-indent: -9999px;
+}
+/* ----------- STYLES FOR DEMO SITE ONLY ----------- */
+#demoMenu {
+  background: #414141;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  position: fixed;
+  display: inline;
+  top: 0;
+  z-index: 9999;
+  border-bottom: 1px solid #ffffff;
+}
+#demoMenu ul {
+  margin: 0;
+  padding: 0;
+}
+#demoMenu ul li {
+  margin: 0;
+  padding: 10px 20px;
+  float: left;
+  list-style: none;
+  font-size: 75%;
+  font-weight: bold;
+}
+#demoMenu ul li a {
+  color: #dedfe3;
+  text-decoration: none;
+}
+#demoMenu ul li a:hover {
+  color: #ffffff;
+}
+/* ----------- LOGIN FORM ----------- */
+form {
+  background: #f8f8f8;
+  -webkit-box-shadow: 0 1px 0 #ffffff inset;
+  -moz-box-shadow: 0 1px 0 #ffffff inset;
+  -ms-box-shadow: 0 1px 0 #ffffff inset;
+  -o-box-shadow: 0 1px 0 #ffffff inset;
+  box-shadow: 0 1px 0 #ffffff inset;
+  border: 1px solid #d2d2d2;
+  margin: 0 auto 40px;
+  padding: 40px 40px 0 40px;
+  text-align: left;
+  text-shadow: 0 1px 0 #ffffff;
+  max-width: 498px;
+  overflow: auto;
+}
+form input {
+  width: 100%;
+  margin: 0 0 40px 0;
+  padding: 10px;
+  font-size: .9em;
+  border: 1px solid #d2d2d2;
+  color: #414141;
+}
+form input[type="submit"] {
+  width: 50%;
+  border-color: transparent;
+  font-weight: bold;
+  color: #ffffff;
+  background: #747474;
+  float: left;
+}
+form input[type="submit"]:hover {
+  background: #5a5a5a;
+}
+form input[type="submit"]:focus {
+  background: #5a5a5a;
+}
+form label {
+  display: none;
+}
+form span {
+  float: right;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+}
+form span a {
+  color: #747474;
+  text-decoration: none;
+}
+form span a:hover {
+  text-decoration: underline;
+  color: #414141;
+}
+form p {
+  margin: 0 0 30px 0;
+}
+form ::-webkit-input-placeholder {
+  font-style: italic;
+  color: #a9aaae;
+}
+form :-moz-placeholder {
+  /* Firefox 18- */
+
+  font-style: italic;
+  color: #a9aaae;
+}
+form ::-moz-placeholder {
+  /* Firefox 19+ */
+
+  font-style: italic;
+  color: #a9aaae;
+}
+form :-ms-input-placeholder {
+  font-style: italic;
+  color: #a9aaae;
+}
+/* ----------- FOOTER ----------- */
+footer {
+  font-size: 80%;
+}
+/* ----------- ALERTS ----------- */
+.alert {
+  border: 1px solid;
+  margin: 0 auto 40px;
+  padding: 30px 40px 20px;
+  position: relative;
+  text-align: left;
+  text-shadow: 0 1px 0 #ffffff;
+  max-width: 498px;
+  overflow: auto;
+}
+.alert a {
+  text-decoration: none;
+}
+.alert a:hover {
+  text-decoration: underline;
+}
+.alert.warning {
+  background: #fbefde;
+  border-color: #ebac55;
+}
+.alert.warning a {
+  color: #c37b17;
+}
+.alert.error {
+  background: #f3c9d3;
+  border-color: #dd5f7f;
+}
+.alert.error a {
+  color: #9c2140;
+}
+.alert.success {
+  background: #c8dfbc;
+  border-color: #73ad55;
+}
+.alert.success a {
+  color: #73ad55;
+}
+.alert .icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  text-indent: -9999px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../images/chathamdirect-sprite-2.png) no-repeat;
+}
+.alert .icon.close {
+  background-position: -240px -30px;
+}
+.alert p {
+  line-height: 1.65em;
+}
+/* ----------- MEDIA QUERIES ----------- */
+@media only screen and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 540px) {
+  main {
+    margin: 180px 20px;
+    /* change top margin to 40px after demo site removed */
+  
+  }
+  header h1 {
+    width: 244px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: transparent url(../images/chatham-direct-logo-login-small.png) top left no-repeat;
+  }
+  form {
+    margin: 0 auto 20px;
+    padding: 20px;
+  }
+  form input[type="submit"] {
+    width: 100%;
+  }
+  form span {
+    width: 100%;
+    padding: 0;
+  }
+  .alert {
+    padding: 20px 20px 10px 20px;
+  }
+  footer {
+    text-align: center;
+  }
+}
