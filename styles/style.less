@@ -114,6 +114,10 @@ form {
 	max-width: 498px; 
 	overflow: auto;
 
+	p {
+		line-height: 1.65em;	
+		}
+	
 	input {
 		width: 100%;
 		margin: 0 0 40px 0;
@@ -121,6 +125,11 @@ form {
 		font-size: .9em;
 		border: 1px solid @mediumgray;
 		color: @black;
+
+		&#password {
+			margin-bottom: 15px;
+		}
+
 
 		&[type="submit"] {
 			width: 50%;
@@ -142,6 +151,24 @@ form {
 
 	label {
 		display: none;
+	}
+
+	.remember {
+		padding: 0 0 0 10px;
+
+		input {
+			width: inherit;
+		}
+
+		span {
+			float: none;
+			width: auto;
+			text-align: left;
+			padding: 0;
+			font-size: 80%;
+			color: lighten(@black, 20)
+		}
+
 	}
 
 	span {

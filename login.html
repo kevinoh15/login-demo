@@ -36,9 +36,16 @@
 			<input type="text" placeholder="Username" id="username" autofocus tabindex=1 required />
 			<label for"password">Password</label>
 			<input type="password" placeholder="Password" id="password" tabindex=2 required />
-			<input type="submit" value="Log In" tabindex=3 />
+			<div class="remember">
+				<label for"remember" class"remember">Remember Username</label>
+				<input type="checkbox" name="remember" value="remember" tabindex=3 />
+				<span>
+					Remember Username
+				</span>
+			</div>
+			<input type="submit" value="Log In" tabindex=4 />
 			<span>
-				<a href="loginhelp.html">I need help logging in</a>
+				<a href="loginhelp.html" tabindex="5">I need help logging in</a>
 			</span>
 		</form>
 		<footer>

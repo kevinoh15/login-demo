@@ -99,6 +99,9 @@ form {
   max-width: 498px;
   overflow: auto;
 }
+form p {
+  line-height: 1.65em;
+}
 form input {
   width: 100%;
   margin: 0 0 40px 0;
@@ -106,6 +109,9 @@ form input {
   font-size: .9em;
   border: 1px solid #d2d2d2;
   color: #414141;
+}
+form input#password {
+  margin-bottom: 15px;
 }
 form input[type="submit"] {
   width: 50%;
@@ -123,6 +129,20 @@ form input[type="submit"]:focus {
 }
 form label {
   display: none;
+}
+form .remember {
+  padding: 0 0 0 10px;
+}
+form .remember input {
+  width: inherit;
+}
+form .remember span {
+  float: none;
+  width: auto;
+  text-align: left;
+  padding: 0;
+  font-size: 80%;
+  color: #747474;
 }
 form span {
   float: right;
