@@ -15,6 +15,8 @@
 @red:			rgb(156, 33, 64);	/* negative actions and critical alerts */
 @white:			rgb(255, 255, 255);	/* white, duh. */
 
+@buttons:		darken(@blue, 20);		
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -49,12 +51,12 @@ main {
 	text-align: center;
 }
 
-header h1 {
+header h1  a {
 	width: 371px;
-	height: 106px;
+	height: 96px;
 	margin: 0 auto 40px;
 	display: block;
-	background: transparent url(../images/chatham-direct-logo-login.png) top left no-repeat;
+	background: transparent url(../images/chatham-financial-logo-login.png) top left no-repeat;
 	text-indent: -9999px;
 }
 
@@ -139,20 +141,23 @@ form {
 			border-color: transparent;
 			font-weight: bold;
 			color: @white;
-			background: lighten(@black, 20);
+			background: @buttons;
 			float: left;
 			
 			&:hover {
-				background: lighten(@black, 10);
+				background: darken(@buttons, 15);
 			}
 
 			&:focus {
-				background: lighten(@black, 10);
+				background: darken(@buttons, 30);
 			}
 
-			&.reset {
-				
+			&:active {
+				background: darken(@buttons, 30);
+				position: relative;
+				top: 1px;
 			}
+
 		}
 		
 		&.help {
@@ -195,6 +200,11 @@ form {
 
 			&:hover {
 				color: @black;
+			}
+
+			&:active {
+				position: relative;
+				top: 1px;
 			}
 		}
 
@@ -314,11 +324,11 @@ footer {
 		margin: 180px 20px; /* change top margin to 40px after demo site removed */
 	}
 
-	header h1 {
-		width: 244px;
-		height: 70px;
+	header h1 a {
+		width: 245px;
+		height: 64px;
 		margin: 0 auto 20px;
-		background: transparent url(../images/chatham-direct-logo-login-small.png) top left no-repeat;
+		background: transparent url(../images/chatham-financial-logo-login-small.png) top left no-repeat;
 	}
 
 	form {
@@ -327,6 +337,14 @@ footer {
 	
 		input[type="submit"] {
 				width: 100%;
+			
+			&:active {
+				background: darken(@buttons, 30);
+				position: static;
+				top: 0;
+			}
+
+
 		}
 
 		span {
