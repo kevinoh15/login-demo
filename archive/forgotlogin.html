@@ -18,11 +18,11 @@
 	<div id="demoMenu">
 		<ul>
 			<li><a href="login.html">Login</a></li>
-			<li><a href="usernamewarning.html">Username Warning</a></li>
-			<li><a href="passwordwarning.html">Password Warning</a></li>
+			<li><a href="loginwarning.html">Login Warning</a></li>
 			<li><a href="loginerror.html">Login Error</a></li>
 			<li><a href="expired.html">Password Expired</a></li>
-			<li><a href="loginhelp.html">Login Help</a></li>
+			<li><a href="forgotlogin.html">Forgot Login</a></li>
+			<li><a href="forgotpassword.html">Forgot Password</a></li>	
 			<li><a href="reset.html">Reset Password</a></li>
 			<li><a href="resetsuccess.html">Reset Success</a></li>
 		</ul>
@@ -32,13 +32,12 @@
 			<h1>Chatham Direct Login</h1>
 		</header>
 		<form action="" id="remind" name="remind">
-			<p>Please enter the email address associated with this account and we'll send some help your way.</p> 
-			<label for"email">Email Address</label>
-			<input type="email" placeholder="Email address" id="email" class="help" tabindex=1 required />
-			<div class="tools">
-				<a href="login.html">Return to log in</a>
-			</div>
-			<input type="submit" value="Send Help" class="reset" tabindex=2 />
+			<p>Please enter the email address associated with this account and we will send you a reminder about your login.</p> 
+			<input type="email" placeholder="Email address" id="email" tabindex=1 required />
+			<label for"email">
+				Email Address
+			</label>
+			<input type="submit" value="Send Reminder" class="reset" tabindex=2 />
 		</form>
 		<footer>
 			<p>© 1991-2013 Chatham Financial</p>

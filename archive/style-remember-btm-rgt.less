@@ -126,14 +126,6 @@ form {
 		border: 1px solid @mediumgray;
 		color: @black;
 
-		&[type="password"] {
-			margin: 0 0 10px 0;
-
-			&.reset {
-				margin: 0 0 40px 0;
-			} 
-		}
-
 		&[type="submit"] {
 			width: 50%;
 			border-color: transparent;
@@ -149,16 +141,7 @@ form {
 			&:focus {
 				background: lighten(@black, 10);
 			}
-
-			&.reset {
-				
-			}
 		}
-		
-		&.help {
-			margin-bottom: 10px;
-		}
-
 	}
 
 	label {
@@ -166,35 +149,33 @@ form {
 	}
 
 	.tools {
-		width: 100%;
-		margin: 0 0 30px;
+		width: 50%;
+		float: right;
+		margin: 0;
+		padding: 2px 0 0 20px;
 		font-size: 80%;
 		color: lighten(@black, 20);
-				
+
 		input {
 			width: auto;
-			display: inline;
-			margin: 0;
+			display: inline-block;
+			margin: 0 0 8px;
 		}
 
 		label {
 			display: inline-block;
 			vertical-align: middle;
-
-			&:after {
-				content: "|";
-				padding: 0 4px 0 8px;
-			}
+			clear: both;
 		}
 
 		a {
+			color: #0000FF;
+			margin: 0 0 0 16px;
 			text-decoration: none;
-			border-bottom: 1px solid @black;
-			padding-bottom: 1px;
-			color: lighten(@black, 20);
+			float: left;
 
 			&:hover {
-				color: @black;
+				text-decoration: underline;
 			}
 		}
 
@@ -230,7 +211,6 @@ form {
 /* ----------- FOOTER ----------- */
 
 footer {
-	color: lighten(@black, 20);
 	font-size: 80%;
 }
 
@@ -325,6 +305,10 @@ footer {
 		margin: 0 auto 20px;
 		padding: 20px;
 	
+		input[type="password"] {
+				margin: 0;
+		}
+
 		input[type="submit"] {
 				width: 100%;
 		}
@@ -335,14 +319,24 @@ footer {
 		}
 
 		.tools {
-			margin-bottom: 30px;
+			width: 100%;
+			margin: 5px 0 15px;
+			padding: 10px;
+
+			a {
+				float: none;
+				margin-left: 5px;
+			}
+
 		}
-
-
 	}
 
 	.alert {
 		padding: 20px 20px 10px 20px;
+	}
+
+	footer {
+		text-align: center;
 	}
 
 }

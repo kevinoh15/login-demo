@@ -110,8 +110,11 @@ form input {
   border: 1px solid #d2d2d2;
   color: #414141;
 }
-form input#password {
-  margin-bottom: 15px;
+form input[type="password"] {
+  margin: 0 0 10px 0;
+}
+form input[type="password"].reset {
+  margin: 0 0 40px 0;
 }
 form input[type="submit"] {
   width: 50%;
@@ -127,35 +130,38 @@ form input[type="submit"]:hover {
 form input[type="submit"]:focus {
   background: #5a5a5a;
 }
+form input.help {
+  margin-bottom: 10px;
+}
 form label {
   display: none;
 }
-form .remember {
-  padding: 0 0 0 10px;
-}
-form .remember input {
-  width: inherit;
-}
-form .remember span {
-  float: none;
-  width: auto;
-  text-align: left;
-  padding: 0;
+form .tools {
+  width: 100%;
+  margin: 0 0 30px;
   font-size: 80%;
   color: #747474;
 }
-form span {
-  float: right;
-  width: 50%;
-  text-align: center;
-  padding: 10px;
+form .tools input {
+  width: auto;
+  display: inline;
+  margin: 0;
 }
-form span a {
-  color: #747474;
+form .tools label {
+  display: inline-block;
+  vertical-align: middle;
+}
+form .tools label:after {
+  content: "|";
+  padding: 0 4px 0 8px;
+}
+form .tools a {
   text-decoration: none;
+  border-bottom: 1px solid #414141;
+  padding-bottom: 1px;
+  color: #747474;
 }
-form span a:hover {
-  text-decoration: underline;
+form .tools a:hover {
   color: #414141;
 }
 form p {
@@ -183,6 +189,7 @@ form :-ms-input-placeholder {
 }
 /* ----------- FOOTER ----------- */
 footer {
+  color: #747474;
   font-size: 80%;
 }
 /* ----------- ALERTS ----------- */
@@ -263,10 +270,10 @@ footer {
     width: 100%;
     padding: 0;
   }
+  form .tools {
+    margin-bottom: 30px;
+  }
   .alert {
     padding: 20px 20px 10px 20px;
-  }
-  footer {
-    text-align: center;
   }
 }

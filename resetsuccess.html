@@ -33,17 +33,20 @@
 		</header>
 		<div class="alert success">
 			<a href="#" class="icon close">Close</a>
-			<p>Congratulations, you have succesfully reset your account. Please log in using your new password to continue.</p> 
+			<p><strong>Nice work!</strong><br />
+				You have succesfully reset your account. Please log in using your new password to continue.</p> 
 		</div> <!-- alert success -->
 		<form action="" id="login" name="login">
 			<label for"username">Username</label>
 			<input type="text" placeholder="Username" id="username" autofocus tabindex=1 required />
 			<label for"password">Password</label>
 			<input type="password" placeholder="Password" id="password" tabindex=2 required />
-			<input type="submit" value="Log In" tabindex=3 />
-			<span>
-				<a href="loginhelp.html">I need help logging in</a>
-			</span>
+			<div class="tools">
+				<input type="checkbox" name="remember" value="remember" tabindex=3 />
+				<label for"remember">Remember Username</label>
+				<a href="loginhelp.html" tabindex="5">I need help logging in</a>
+			</div> <!-- /tools -->
+			<input type="submit" value="Log In" tabindex=4 />
 		</form>
 		<footer>
 			<p>© 1991-2013 Chatham Financial</p>
