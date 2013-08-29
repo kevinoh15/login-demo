@@ -33,30 +33,41 @@ html {
   text-rendering: optimizeLegibility;
   background: #eeeff2;
 }
+a {
+  outline: none;
+  text-decoration: none;
+}
+a:active {
+  position: relative;
+  top: 1px;
+}
 body {
   margin: 0;
-}
-main {
-  display: block;
-  margin: 120px auto 0;
-  /*top padding change to 80px after demo site removed */
-
-  max-width: 1280px;
-  text-align: center;
+  background: url(../images/body-bg.png) top center no-repeat;
+  background-size: 100% 4px;
+  padding: 5px 20px;
 }
 header h1 a {
   width: 371px;
   height: 96px;
-  margin: 0 auto 40px;
+  margin: 120px auto 40px;
+  /*top margin needs adjusted after demo site removed */
+
   display: block;
   background: transparent url(../images/chatham-financial-logo-login.png) top left no-repeat;
   text-indent: -9999px;
+}
+main {
+  display: block;
+  margin: 0 auto;
+  max-width: 1280px;
+  text-align: center;
 }
 /* ----------- STYLES FOR DEMO SITE ONLY ----------- */
 #demoMenu {
   background: #414141;
   width: 100%;
-  margin: 0;
+  margin: 4px 0 0 -20px;
   padding: 10px;
   position: fixed;
   display: inline;
@@ -78,7 +89,6 @@ header h1 a {
 }
 #demoMenu ul li a {
   color: #dedfe3;
-  text-decoration: none;
 }
 #demoMenu ul li a:hover {
   color: #ffffff;
@@ -161,17 +171,12 @@ form .tools label:after {
   padding: 0 4px 0 8px;
 }
 form .tools a {
-  text-decoration: none;
   border-bottom: 1px solid #414141;
   padding-bottom: 1px;
   color: #747474;
 }
 form .tools a:hover {
   color: #414141;
-}
-form .tools a:active {
-  position: relative;
-  top: 1px;
 }
 form p {
   margin: 0 0 30px 0;
@@ -212,12 +217,6 @@ footer {
   max-width: 498px;
   overflow: auto;
 }
-.alert a {
-  text-decoration: none;
-}
-.alert a:hover {
-  text-decoration: underline;
-}
 .alert.warning {
   background: #fbefde;
   border-color: #ebac55;
@@ -255,17 +254,66 @@ footer {
 .alert p {
   line-height: 1.65em;
 }
+/* ----------- EMAIL STYLES ----------- */
+body.email main {
+  max-width: 625px;
+  margin: 30px auto 20px;
+  padding: 20px 30px 40px;
+  text-align: left;
+  background: #f8f8f8;
+  -webkit-box-shadow: 0 1px 0 #ffffff inset;
+  -moz-box-shadow: 0 1px 0 #ffffff inset;
+  -ms-box-shadow: 0 1px 0 #ffffff inset;
+  -o-box-shadow: 0 1px 0 #ffffff inset;
+  box-shadow: 0 1px 0 #ffffff inset;
+  border: 1px solid #d2d2d2;
+  text-shadow: 0 1px 0 #ffffff;
+  overflow: auto;
+}
+body.email main p {
+  line-height: 1.65em;
+}
+body.email main .btn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 50%;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  background: #5c95cf;
+}
+body.email main .btn:hover {
+  background: #336eab;
+}
+body.email main .btn:focus {
+  background: #214871;
+}
+body.email main .btn:active {
+  background: #214871;
+  position: relative;
+  top: 1px;
+}
+body.email footer {
+  max-width: 625px;
+  margin: 0 auto;
+  color: #747474;
+  font-size: 80%;
+  text-align: center;
+}
 /* ----------- MEDIA QUERIES ----------- */
 @media only screen and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 540px) {
   main {
-    margin: 180px 20px;
-    /* change top margin to 40px after demo site removed */
-  
+    margin: 0px 20px;
   }
   header h1 a {
     width: 245px;
     height: 64px;
-    margin: 0 auto 20px;
+    margin: 160px auto 20px;
+    /* change top margin to 40px after demo site removed */
+  
     background: transparent url(../images/chatham-financial-logo-login-small.png) top left no-repeat;
   }
   form {
@@ -286,8 +334,16 @@ footer {
   }
   form .tools {
     margin-bottom: 30px;
+    font-size: 75%;
   }
   .alert {
     padding: 20px 20px 10px 20px;
+  }
+  body.email main {
+    margin: 20px 0;
+    padding: 20px;
+  }
+  body.email main .btn {
+    width: 100%;
   }
 }

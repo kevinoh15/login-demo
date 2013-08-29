@@ -1,0 +1,144 @@
+/* styles */
+
+/* ----------- COLORS ----------- */
+
+@black:			rgb(65, 65, 65); 	/* fonts. nav. */
+@darkgray:		rgb(169, 170, 174);	/* borders. icons. */
+@mediumgray:	rgb(210, 210, 210);	/* primarily for hovers on certain buttons. */
+@gray:			rgb(222, 223, 227);	/* sidebar tabs. certain button bg. */
+@lightgray:		rgb(238, 239, 242);	/* drop downs. alternating rows. */
+@blue:			rgb(171, 200, 230);	/* selection colors. */
+@green:			rgb(115, 173, 85);	/* positive colors. submissions/saves. */
+@green2:		rgb(100, 153, 73);	/* hover and border for green button */
+@green3:		rgb(89, 139, 64);	/* active for green button */
+@yellow:		rgb(235, 172, 85);	/* non-critical alerts. */
+@red:			rgb(156, 33, 64);	/* negative actions and critical alerts */
+@white:			rgb(255, 255, 255);	/* white, duh. */
+
+@buttons:		darken(@blue, 20);		
+
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html { 
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	color: @black;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	background: @lightgray;
+}
+
+a {
+	outline: none;
+}
+
+body {
+	margin: 0;
+	background: url(../images/body-bg.png) top center no-repeat;
+	background-size: 100% 4px;
+	padding: 5px 20px;
+}
+
+header h1  a {
+	width: 371px;
+	height: 96px;
+	margin: 0 auto;
+	display: block;
+	background: transparent url(../images/chatham-financial-logo-login.png) top left no-repeat;
+	text-indent: -9999px;
+}
+
+main.email {
+	max-width: 625px; 
+	margin: 30px auto 20px;
+	padding: 20px 30px 40px;
+	text-align: left;
+	background: lighten(@darkgray, 30);
+	-webkit-box-shadow: 0 1px 0 @white inset;
+	-moz-box-shadow: 0 1px 0 @white inset;
+	-ms-box-shadow: 0 1px 0 @white inset;
+	-o-box-shadow: 0 1px 0 @white inset;
+	box-shadow: 0 1px 0 @white inset;
+	border: 1px solid @mediumgray;
+	text-shadow: 0 1px 0 @white;
+	overflow: auto;
+
+	p {
+		line-height: 1.65em;	
+		}
+	
+	.btn {
+		display: inline-block;
+		margin: 10px 0;
+		padding: 10px;
+		width: 50%;	
+		font-weight: bold;
+		color: @white;
+		text-align: center;
+		text-decoration: none;
+		text-shadow: none;
+		background: @buttons;
+
+		&:hover {
+			background: darken(@buttons, 15);
+		}
+
+		&:focus {
+			background: darken(@buttons, 30);
+		}
+
+		&:active {
+			background: darken(@buttons, 30);
+			position: relative;
+			top: 1px;
+		}
+
+	}
+
+}
+
+/* ----------- FOOTER ----------- */
+
+footer {
+	max-width: 625px;
+	margin: 0 auto;
+	color: lighten(@black, 20);
+	font-size: 80%;
+	text-align: center;
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+
+@media only screen and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 540px)  {
+
+	header h1 a {
+		width: 245px;
+		height: 64px;
+		margin: 0 auto ;
+		background: transparent url(../images/chatham-financial-logo-login-small.png) top left no-repeat;
+	}
+
+
+	main {
+		margin: 20px 0;
+		padding: 20px;
+	
+		.btn {
+			width: 100%;
+		}
+	}
+
+}

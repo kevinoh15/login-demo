@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body class="email">
 	<div id="demoMenu">
 		<ul>
 			<li><a href="login.html">Login</a></li>
@@ -32,25 +32,14 @@
 		<h1><a href="login.html">Chatham Direct Login</a></h1>
 	</header>
 	<main>
-		<div class="alert warning">
-			<a href="#" class="icon close">Close</a>
-			<p>Sorry, we didn't recognize that username. Do you need <a href="loginhelp.html">help logging in</a>?</p> 
-		</div> <!-- alert warning -->
-		<form action="" id="login" name="login">
-			<label for"username">Username</label>
-			<input type="text" placeholder="Username" id="username" autofocus tabindex=1 required />
-			<label for"password">Password</label>
-			<input type="password" placeholder="Password" id="password" tabindex=2 required />
-			<div class="tools">
-				<input type="checkbox" name="remember" value="remember" tabindex=3 />
-				<label for"remember">Remember Username</label>
-				<a href="loginhelp.html" tabindex="5">I need help logging in</a>
-			</div> <!-- /tools -->
-			<input type="submit" value="Log In" tabindex=4 />
-		</form>
-		<footer>
-			<p>© 1991-2013 Chatham Financial</p>
-		</footer>
+		<h2>Hello, **first name**!</h2>
+		<p>Your username for Chatham Direct is <strong>**username**</strong>. If you do not remember your password and would like to reset it, the following link will be available for the next few minutes.</p>
+		<a href="#">Reset password</a>
+		<p>Otherwise, log in to get started.</p>
+		<a href="#" class="btn center">Login Now</a>
 	</main>
+	<footer>
+		<p>© 1991-2013 Chatham Financial</p>
+	</footer>
 </body>
 </html>

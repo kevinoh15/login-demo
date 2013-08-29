@@ -17,6 +17,7 @@
 
 @buttons:		darken(@blue, 20);		
 
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -40,24 +41,37 @@ html {
 	background: @lightgray;
 }
 
-body {
-	margin: 0;
+a {
+	outline: none;
+	text-decoration: none;
+	
+	&:active {
+		position: relative;
+		top: 1px;
+	}
 }
 
-main {
-	display: block;
-	margin: 120px auto 0; /*top padding change to 80px after demo site removed */
-	max-width: 1280px;
-	text-align: center;
+body {
+	margin: 0;
+	background: url(../images/body-bg.png) top center no-repeat;
+	background-size: 100% 4px;
+	padding: 5px 20px;
 }
 
 header h1  a {
 	width: 371px;
 	height: 96px;
-	margin: 0 auto 40px;
+	margin: 120px auto 40px; /*top margin needs adjusted after demo site removed */
 	display: block;
 	background: transparent url(../images/chatham-financial-logo-login.png) top left no-repeat;
 	text-indent: -9999px;
+}
+
+main {
+	display: block;
+	margin: 0 auto;
+	max-width: 1280px;
+	text-align: center;
 }
 
 /* ----------- STYLES FOR DEMO SITE ONLY ----------- */
@@ -65,7 +79,7 @@ header h1  a {
 #demoMenu {
 	background: @black;
 	width: 100%;
-	margin: 0;
+	margin: 4px 0 0 -20px;
 	padding: 10px;
 	position: fixed;
 	display: inline;
@@ -87,8 +101,7 @@ header h1  a {
 			
 				a {
 					color: @gray;
-					text-decoration: none;
-
+					
 					&:hover {
 						color: @white;
 						
@@ -193,7 +206,6 @@ form {
 		}
 
 		a {
-			text-decoration: none;
 			border-bottom: 1px solid @black;
 			padding-bottom: 1px;
 			color: lighten(@black, 20);
@@ -202,10 +214,6 @@ form {
 				color: @black;
 			}
 
-			&:active {
-				position: relative;
-				top: 1px;
-			}
 		}
 
 	}
@@ -255,15 +263,6 @@ footer {
 	text-shadow: 0 1px 0 @white;
 	max-width: 498px; 
 	overflow: auto;
-
-	a {
-		text-decoration: none;
-	
-		&:hover {
-			text-decoration: underline;
-		}
-
-	}
 
 	&.warning {
 		background: lighten(@yellow, 30);
@@ -316,18 +315,81 @@ footer {
 
 }
 
+/* ----------- EMAIL STYLES ----------- */
+
+body.email {
+
+	main {
+		max-width: 625px; 
+		margin: 30px auto 20px;
+		padding: 20px 30px 40px;
+		text-align: left;
+		background: lighten(@darkgray, 30);
+		-webkit-box-shadow: 0 1px 0 @white inset;
+		-moz-box-shadow: 0 1px 0 @white inset;
+		-ms-box-shadow: 0 1px 0 @white inset;
+		-o-box-shadow: 0 1px 0 @white inset;
+		box-shadow: 0 1px 0 @white inset;
+		border: 1px solid @mediumgray;
+		text-shadow: 0 1px 0 @white;
+		overflow: auto;
+
+		p {
+			line-height: 1.65em;	
+			}
+		
+		.btn {
+			display: inline-block;
+			margin: 10px 0;
+			padding: 10px;
+			width: 50%;	
+			font-weight: bold;
+			color: @white;
+			text-align: center;
+			text-decoration: none;
+			text-shadow: none;
+			background: @buttons;
+
+			&:hover {
+				background: darken(@buttons, 15);
+			}
+
+			&:focus {
+				background: darken(@buttons, 30);
+			}
+
+			&:active {
+				background: darken(@buttons, 30);
+				position: relative;
+				top: 1px;
+			}
+
+		}
+
+	}
+
+	footer {
+		max-width: 625px;
+		margin: 0 auto;
+		color: lighten(@black, 20);
+		font-size: 80%;
+		text-align: center;
+	}
+
+}
+
 /* ----------- MEDIA QUERIES ----------- */
 
 @media only screen and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 540px)  {
 
 	main {
-		margin: 180px 20px; /* change top margin to 40px after demo site removed */
+		margin: 0px 20px; 
 	}
 
 	header h1 a {
 		width: 245px;
 		height: 64px;
-		margin: 0 auto 20px;
+		margin: 160px auto 20px; /* change top margin to 40px after demo site removed */
 		background: transparent url(../images/chatham-financial-logo-login-small.png) top left no-repeat;
 	}
 
@@ -336,14 +398,13 @@ footer {
 		padding: 20px;
 	
 		input[type="submit"] {
-				width: 100%;
+			width: 100%;
 			
 			&:active {
 				background: darken(@buttons, 30);
 				position: static;
 				top: 0;
 			}
-
 
 		}
 
@@ -354,8 +415,8 @@ footer {
 
 		.tools {
 			margin-bottom: 30px;
+			font-size: 75%;
 		}
-
 
 	}
 
@@ -363,4 +424,15 @@ footer {
 		padding: 20px 20px 10px 20px;
 	}
 
+	body.email {
+		
+		main {
+			margin: 20px 0;
+			padding: 20px;
+	
+			.btn {
+				width: 100%;
+			}
+		}
+	}
 }
