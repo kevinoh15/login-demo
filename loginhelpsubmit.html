@@ -23,8 +23,9 @@
 			<li><a href="loginerror.html">Login Error</a></li>
 			<li><a href="expired.html">Password Expired</a></li>
 			<li><a href="loginhelp.html">Login Help</a></li>
-			<li><a href="reset.html">Reset Password</a></li>
-			<li><a href="resetsuccess.html">Reset Success</a></li>
+			<li><a href="loginhelpsubmit.html">Login Help Submit</a></li>
+			<li><a href="change.html">Change Password</a></li>
+			<li><a href="changesuccess.html">Change Success</a></li>
 			<li><a href="email.html">Login Help Email</a></li>
 		</ul>
 	</div>
@@ -32,14 +33,19 @@
 		<h1><a href="login.html">Chatham Direct Login</a></h1>
 	</header>
 	<main>
-		<form action="" id="login" name="login">
-			<p>Enter a new password and verify it to reset your password. </p> 
-			<label for"newpassword">New Password</label>
-			<input type="password" placeholder="New password" id="newpassword" class="reset" tabindex=4 required />
-			<label for"confirmpassword">Confirm Password</label>
-			<input type="password" placeholder="Re-enter New Password" id="confirmpassword" class="reset" tabindex=5 required />
-			<input type="submit" value="Reset Password" class="reset" tabindex=6 />
-		</form>	
+		<div class="alert success">
+			<a href="#" class="icon close">Close</a>
+			<p>Thank you! Check your email for information on logging in to your Chatham account. If you don’t receive the email, check your spam folder or try again with a different email address.</p> 
+		</div> <!-- alert success -->
+		<form action="" id="remind" name="remind">
+			<p>Enter the email address associated with your Chatham account and we'll send you some helpful login information.</p> 
+			<label for"email">Email Address</label>
+			<input type="email" placeholder="Email address" id="email" class="help" tabindex=1 required />
+			<div class="tools">
+				<a href="login.html">Return to log in</a>
+			</div>
+			<input type="submit" value="Send Help" class="reset" tabindex=2 />
+		</form>
 		<footer>
 			<p>© 1991-2013 Chatham Financial</p>
 		</footer>

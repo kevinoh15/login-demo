@@ -34,8 +34,12 @@ html {
   background: #eeeff2;
 }
 a {
+  color: #0000ff;
   outline: none;
   text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 a:active {
   position: relative;
@@ -177,6 +181,7 @@ form .tools a {
 }
 form .tools a:hover {
   color: #414141;
+  text-decoration: none;
 }
 form p {
   margin: 0 0 30px 0;

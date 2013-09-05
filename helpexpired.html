@@ -23,8 +23,9 @@
 			<li><a href="loginerror.html">Login Error</a></li>
 			<li><a href="expired.html">Password Expired</a></li>
 			<li><a href="loginhelp.html">Login Help</a></li>
-			<li><a href="reset.html">Reset Password</a></li>
-			<li><a href="resetsuccess.html">Reset Success</a></li>
+			<li><a href="loginhelpsubmit.html">Login Help Submit</a></li>
+			<li><a href="change.html">Change Password</a></li>
+			<li><a href="changesuccess.html">Change Success</a></li>
 			<li><a href="email.html">Login Help Email</a></li>
 		</ul>
 	</div>
@@ -32,22 +33,20 @@
 		<h1><a href="login.html">Chatham Direct Login</a></h1>
 	</header>
 	<main>
-		<div class="alert success">
+		<div class="alert error">
 			<a href="#" class="icon close">Close</a>
-			<p><strong>Nice work!</strong><br />
-				You have succesfully reset your account. Please log in using your new password to continue.</p> 
-		</div> <!-- alert success -->
-		<form action="" id="login" name="login">
-			<label for"username">Username</label>
-			<input type="text" placeholder="Username" id="username" autofocus tabindex=1 required />
-			<label for"password">Password</label>
-			<input type="password" placeholder="Password" id="password" tabindex=2 required />
+			<p><strong>The link you are using has expired.</strong><br />
+				Enter the email address associated with your Chatham account and we'll send you a new email with an updated link for changing your password.
+			</p> 
+		</div> <!-- alert error -->
+		<form action="" id="remind" name="remind">
+			<p>Enter the email address associated with your Chatham account and we'll send you some helpful login information.</p> 
+			<label for"email">Email Address</label>
+			<input type="email" placeholder="Email address" id="email" class="help" tabindex=1 required />
 			<div class="tools">
-				<input type="checkbox" name="remember" value="remember" tabindex=3 />
-				<label for"remember">Remember Username</label>
-				<a href="loginhelp.html" tabindex="5">I need help logging in</a>
-			</div> <!-- /tools -->
-			<input type="submit" value="Log In" tabindex=4 />
+				<a href="login.html">Return to log in</a>
+			</div>
+			<input type="submit" value="Send Help" class="reset" tabindex=2 />
 		</form>
 		<footer>
 			<p>© 1991-2013 Chatham Financial</p>

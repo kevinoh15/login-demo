@@ -14,7 +14,7 @@
 
 </head>
 
-<body class="email">
+<body>
 	<div id="demoMenu">
 		<ul>
 			<li><a href="login.html">Login</a></li>
@@ -33,15 +33,26 @@
 		<h1><a href="login.html">Chatham Direct Login</a></h1>
 	</header>
 	<main>
-		<h2>Hello, **first name**!</h2>
-		<p>Your Chatham username is <strong>**username**</strong>.</p>
-		<p>If you do not remember your password and would like to change it now, use the link below. The change password link will only be active for the next few minutes.<p>
-		<a href="#">Change password now</a>
-		<p>If you do not need to change your password, log in to get started.</p>
-		<a href="#" class="btn center">Log In</a>
+		<div class="alert success">
+			<a href="#" class="icon close">Close</a>
+			<p><strong>You have successfully changed your password.</strong><br />
+				Please enter your username and new password to continue logging in.</p> 
+		</div> <!-- alert success -->
+		<form action="" id="login" name="login">
+			<label for"username">Username</label>
+			<input type="text" placeholder="Username" id="username" autofocus tabindex=1 required />
+			<label for"password">Password</label>
+			<input type="password" placeholder="Password" id="password" tabindex=2 required />
+			<div class="tools">
+				<input type="checkbox" name="remember" value="remember" tabindex=3 />
+				<label for"remember">Remember Username</label>
+				<a href="loginhelp.html" tabindex="5">I need help logging in</a>
+			</div> <!-- /tools -->
+			<input type="submit" value="Log In" tabindex=4 />
+		</form>
+		<footer>
+			<p>© 1991-2013 Chatham Financial</p>
+		</footer>
 	</main>
-	<footer>
-		<p>© 1991-2013 Chatham Financial</p>
-	</footer>
 </body>
 </html>
